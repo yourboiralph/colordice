@@ -1,4 +1,5 @@
 
+
 let dice = ['red', 'orange', 'yellow', 'green'];
 let invalidRed = false;
 let invalidOrange = false;
@@ -7,16 +8,12 @@ let invalidGreen = false;
 let invalidBlue = false;
 let invalidPurple = false;
 
-
-document.querySelector('.clearer').addEventListener('click', () => {
-    invalidRed = false;
-    invalidOrange = false;
-    invalidYellow = false;
-    invalidGreen = false;
-    invalidBlue = false;
-    invalidPurple = false;
-    console.log("cleared")
-})
+const showWords = [
+    "FEELING LUCKY?",
+    "WHAT COLOR WILL IT BE?",
+    "FINGERS CROSSED...",
+    "GOOD LUCK!"
+]
 
 
 document.querySelector('.red').addEventListener('click', () => {
@@ -108,8 +105,10 @@ const audio = new Audio();
 audio.src = 'audio/shake.MP3';
 const rollButton = document.querySelector('.roll-again')
 
-rollButton.addEventListener('click', () => {
+rollButton.addEventListener('click', rolled = () => {
     rollDice();
+    let wordSelector = Math.trunc(Math.random()*showWords.length);
+    document.querySelector('.loading__text').textContent = showWords[wordSelector];
     document.querySelector('.container__loading').style.display = 'block';
     audio.play();
     setTimeout(() => {
@@ -117,7 +116,21 @@ rollButton.addEventListener('click', () => {
     }, 1700);
     console.log("rolled")
 })
+diceNumber = document.querySelector('.choices__number').value;
 
+function changeDice () {
+    diceNumber = document.querySelector('.choices__number').value;
+    if(diceNumber === '3'){
+        rolled();
+        document.querySelector('.dice--4').style.display = 'none';
+        document.querySelector('.loading__dice .dice--4').style.display = 'none';
+    }
+    if(diceNumber === '4'){
+        rolled();
+        document.querySelector('.dice--4').style.display = 'block';
+        document.querySelector('.loading__dice .dice--4').style.display = 'block';
+    }
+}
 
 
 

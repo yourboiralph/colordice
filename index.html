@@ -12,11 +12,11 @@
         <div class="wrapper">
             <h1 class="wrapper__text">Roll Color Dice</h1>
             <div class="choices">
-                <select class="choices__number">
+                <select class="choices__number" name="numberOfDice" onchange="changeDice()">
                     <option value="1">1 DIE</option>
                     <option value="2">2 DICE</option>
                     <option value="3">3 DICE</option>
-                    <option value="4">4 DICE</option>
+                    <option selected value="4">4 DICE</option>
                     <option value="5">5 DICE</option>
                     <option value="6">6 DICE</option>
                     <option value="7">7 DICE</option>
@@ -50,7 +50,7 @@
                     <option value="10">10-SIDED</option>
                     <option value="12">12-SIDED</option>
                     <option value="20">20-SIDED</option>
-                    <option value="colordice">COLOR DICE</option>
+                    <option selected value="colordice">COLOR DICE</option>
                 </select>
             </div>
             <div class="dices__container">
@@ -76,7 +76,6 @@
                 <h1>Possible colors are: <span class="red">Red</span>, <span class="orange">Orange</span>,
                 <span class="yellow">Yellow</span>, <span class="green">Green</span>, <span class="blue">Blue</span>, and <span class="purple">Purple</span>.</h1>
             </div>
-            <div class="clearer">Clear</div>
         </div>
     </div>
 
