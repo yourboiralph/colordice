@@ -96,6 +96,12 @@ function rollDice (){
     for(i = 1; i < dice.length; i++){
         document.querySelector(`.dice--${i}`).style.backgroundColor = `${dice[i]}`
     }
+    invalidRed = false;
+    invalidOrange = false;
+    invalidYellow = false;
+    invalidGreen = false;
+    invalidBlue = false;
+    invalidPurple = false;
 }
 
 const audio = new Audio();

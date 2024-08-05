@@ -100,25 +100,33 @@
     color: #08f;
     font-size: 1rem;
     text-decoration: none;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     margin-top: .4rem;
 }
 
 .choices__number{
-    width: 40%;
+    width: 45%;
     background-color: white;
     margin-right: 10px;
     padding: 4px 5px;
     border: 4px solid #08f;
+    font-family: Marvin, sans-serif;
+    letter-spacing: -.01rem;
+    color: #08f;
+    font-size: 1rem;
 }
 
 .choices__type{
-    width: 40%;
+    width: 45%;
     background-color: white;
     margin-right: 10px;
     padding: 4px 5px;
     border: 4px solid #08f;
+    font-family: Marvin, sans-serif;
+    letter-spacing: -.01rem;
+    color: #08f;
+    font-size: 1rem;
 }
 
 .image__logo {
