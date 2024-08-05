@@ -48,7 +48,7 @@ document.querySelector('.purple').addEventListener('click', () => {
 
 function rollDice (){
     
-    for(i = 1; i <= 4; i++){
+    for(i = 1; i <= 4;){
         colorNumber = Math.trunc(Math.random()*6)+1;
 
         if (colorNumber == 1) {
@@ -57,36 +57,42 @@ function rollDice (){
                 continue;
             }
             dice[i] = 'red';
+            i++;
         } else if (colorNumber == 2) {
             if(invalidOrange){
                 console.log("ignored orange")
                 continue;
             }
             dice[i] = 'orange';
+            i++;
         }else if (colorNumber == 3) {
             if(invalidYellow){
                 console.log("ignored yellow")
                 continue;
             }
             dice[i] = 'yellow';
+            i++;
         }else if (colorNumber == 4) {
             if(invalidGreen){
                 console.log("ignored green")
                 continue;
             }
             dice[i] = 'green';
+            i++;
         }else if (colorNumber == 5) {
             if(invalidBlue){
                 console.log("ignored blue")
                 continue;
             }
             dice[i] = 'blue';
+            i++;
         }else if (colorNumber == 6) {
             if(invalidPurple){
                 console.log("ignored purple")
                 continue;
             }
             dice[i] = 'purple';
+            i++;
         }
     }
     
