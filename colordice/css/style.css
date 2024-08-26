@@ -1,0 +1,266 @@
+* {
+    box-sizing: border-box;
+    font: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: Marvin;
+    src: url(../font/Marvin.ttf );
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../img/background.png), radial-gradient(#f1f9ff, #08f);
+    padding-top: 5rem;
+}
+
+.wrapper {
+    padding: 2rem .5rem;
+    max-width: 44rem;
+    margin: 0 auto;
+    min-height: 44rem;
+    background-color: rgba(0, 136, 255, .4);
+    border: 5px solid white;
+    border-radius: 1.5rem;
+}
+
+.wrapper__text {
+    font-family: Marvin, sans-serif;
+    letter-spacing: -.01rem;
+    color: white;
+    text-shadow: 4px 1px .1rem #08f;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.dices__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: .8rem;
+}
+
+.dices {
+    width: 5.6rem;
+    height: 5.6rem;
+    background-color: orange;
+    position: relative;
+    border: .5rem solid white;
+    border-radius: 15px;
+
+
+}
+
+.dices:not(:last-child) {
+
+    margin-right: .8rem;
+}
+
+.dot {
+    width: 1rem;
+    height: 1rem;
+    background-color: white;
+    border-radius: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.roll-again {
+    text-align: center;
+    width: 90%;
+    background-image: linear-gradient(to bottom, rgb(255, 235, 0) 0%, rgb(255, 215, 0) 51%, rgb(255, 244, 188) 100%);
+    ;
+    border: 3px solid white;
+    margin: 0 auto;
+    padding: .3rem;
+    margin-top: 1rem;
+    border-radius: 4px;
+}
+
+.roll-again:hover {
+    filter: brightness(1.1);
+
+}
+
+.roll-again__text {
+    font-family: Marvin, sans-serif;
+    letter-spacing: -.01rem;
+    color: white;
+    text-shadow: -1px -1px 0 #ca8a00, 1px -1px 0 #ca8a00, -1px 1px 0 #ca8a00, 2px 2px 0 #ca8a00;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+
+.choices {
+    display: flex;
+    font-family: Marvin, sans-serif;
+    letter-spacing: -.01rem;
+    color: #08f;
+    font-size: 1rem;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: .4rem;
+    position: relative;
+}
+
+.image__logo {
+    min-width: 20rem;
+    max-width: 20%;
+}
+
+.choices__number {
+    width: 45%;
+    background-color: white;
+    margin-right: 10px;
+    padding: 4px 5px;
+    border: 4px solid #08f;
+    font-family: Marvin, sans-serif;
+    letter-spacing: -.01rem;
+    color: #08f;
+    font-size: 1rem;
+}
+
+.choices__type {
+    width: 45%;
+    background-color: white;
+    margin-right: 10px;
+    padding: 4px 5px;
+    border: 4px solid #08f;
+    font-family: Marvin, sans-serif;
+    letter-spacing: -.01rem;
+    color: #08f;
+    font-size: 1rem;
+}
+
+.container__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.notice {
+    background-color: #08f;
+    padding: 10px 10px;
+    border-radius: 4px;
+    margin-top: 20rem;
+}
+
+.notice h1 {
+    font-family: Arial;
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+}
+
+.red {
+    color: red;
+}
+
+.orange {
+    color: orange
+}
+
+.yellow {
+    color: yellow;
+}
+
+.green {
+    color: green;
+}
+
+.blue {
+    color: blue;
+}
+
+.purple {
+    color: purple;
+}
+
+.loading {
+    transform: translateY(10rem);
+}
+
+.loading__text {
+    font-family: Marvin, sans-serif;
+    letter-spacing: -.01rem;
+    color: white;
+    text-shadow: 4px 1px .1rem #08f;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.loading__dice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: loadingShake 2s;
+    transition: all 2s ease;
+}
+
+.loading__dice .dices {
+    width: 5.6rem;
+    height: 5.6rem;
+    background-color: #ecf5fe;
+    position: relative;
+    border: .5rem solid white;
+    border-radius: 15px;
+
+
+}
+
+.wrapper__dice {
+    background-color: transparent;
+    border: none;
+}
+
+
+@keyframes loadingShake {
+    0% {
+        transform: translate(-.3rem, -.3rem);
+    }
+
+    15% {
+        transform: translate(.3rem, .3rem);
+    }
+
+    30% {
+        transform: translate(-.3rem, -.3rem);
+    }
+
+    45% {
+        transform: translate(.3rem, .3rem);
+    }
+
+    60% {
+        transform: translate(-.3rem, -.3rem);
+    }
+
+    75% {
+        transform: translate(.3rem, .3rem);
+    }
+
+    90% {
+        transform: translate(-.3rem, -.3rem);
+    }
+
+    100% {
+        transform: translate(.3rem, .3rem);
+    }
+
+}
+
+.container__loading {
+    display: none;
+    position: absolute;
+    top: 0;
+}
