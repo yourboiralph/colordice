@@ -1,5 +1,7 @@
 
-
+window.addEventListener('DOMContentLoaded', () => {
+    history.replaceState({}, "", "/loaded");
+});
 let dice = ['red', 'orange', 'yellow', 'green'];
 let invalidRed = false;
 let invalidOrange = false;
